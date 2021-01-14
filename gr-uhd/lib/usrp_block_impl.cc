@@ -700,7 +700,7 @@ void usrp_block_impl::_cmd_handler_mtune(const pmt::pmt_t& tune,
             pmt::to_double(pmt::dict_ref(tune, pmt::mp("rf_freq"), 0));
     }
     if (pmt::dict_has_key(tune, pmt::mp("target_freq"))) {
-        new_tune_request.dsp_target =
+        new_tune_request.target_freq =
             pmt::to_double(pmt::dict_ref(tune, pmt::mp("target_freq"), 0));
     }
     if (pmt::dict_has_key(tune, pmt::mp("dsp_freq_policy"))) {
